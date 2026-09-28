@@ -1,0 +1,12 @@
+csv
+vendor_id,vendor_name,category,default_payment_terms
+V001,ABC Supplies,Hardware,Net 60
+V002,Vertex Systems,Software,Net 30
+V003,CloudNova Solutions,Cloud Services,Net 45
+V004,PrimeTech Components,Electronics,Net 30
+V005,Orion Services,Maintenance,Net 30
+V006,BluePeak Consulting,Consulting,Net 45
+V007,DataSphere Technologies,Software,Net 60
+V008,Metro Office Solutions,Office Supplies,Net 30
+V009,SecureNet Systems,Security,Net 45
+V010,GreenLine Logistics,Logistics,Net 30

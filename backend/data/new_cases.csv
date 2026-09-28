@@ -1,0 +1,11 @@
+case_id,vendor_id,vendor_name,invoice_id,po_number,exception_type,exception_description,po_amount,invoice_amount,po_terms,invoice_terms,po_quantity,invoice_quantity,status
+NEW001,V001,ABC Supplies,INV2001,PO3001,Payment Terms Mismatch,Invoice uses Net 30 while vendor record shows Net 60,800000,800000,Net 60,Net 30,100,100,Pending
+NEW002,V002,Vertex Systems,INV2002,PO3002,Amount Mismatch,Invoice is 35000 higher than PO amount,600000,635000,Net 30,Net 30,10,10,Pending
+NEW003,V003,CloudNova Solutions,INV2003,PO3003,Quantity Mismatch,Invoice contains 90 service units while PO contains 70,450000,578500,Net 45,Net 45,70,90,Pending
+NEW004,V004,PrimeTech Components,INV2004,PO3004,Payment Terms Mismatch,Invoice uses Net 45 while vendor record shows Net 30,300000,300000,Net 30,Net 45,500,500,Pending
+NEW005,V005,Orion Services,INV2005,PO3005,Unexpected Charge,Invoice contains an emergency service charge not shown on PO,250000,275000,Net 30,Net 30,1,1,Pending
+NEW006,V006,BluePeak Consulting,INV2006,PO3006,Amount Mismatch,Invoice is 18000 higher than PO amount,400000,418000,Net 45,Net 45,140,160,Pending
+NEW007,V007,DataSphere Technologies,INV2007,PO3007,Payment Terms Mismatch,Invoice uses Net 30 while vendor record shows Net 60,700000,700000,Net 60,Net 30,50,50,Pending
+NEW008,V008,Metro Office Solutions,INV2008,PO3008,Quantity Mismatch,Invoice contains 320 units while PO contains 250,350000,448000,Net 30,Net 30,250,320,Pending
+NEW009,V009,SecureNet Systems,INV2009,PO3009,Vendor Information Mismatch,Bank account in invoice differs from registered vendor details,500000,500000,Net 45,Net 45,1,1,Pending
+NEW010,V010,GreenLine Logistics,INV2010,PO3010,Amount Mismatch,Invoice is 12000 higher than PO amount,300000,312000,Net 30,Net 30,100,100,Pending
