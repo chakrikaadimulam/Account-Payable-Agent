@@ -662,6 +662,69 @@ select option {
 }
 
 .stats-grid {
+  margin: 0 0 32px 0;
+
+  display: grid;
+
+  grid-template-columns: repeat(4, 1fr);
+
+  gap: 20px;
+}
+
+.stat {
+  padding: 22px 24px;
+
+  border: 1px solid #eaecf0;
+
+  border-radius: 14px;
+
+  background: #ffffff;
+
+  box-shadow: 0 6px 20px rgba(16, 24, 40, 0.04);
+
+  transition: all 0.2s ease;
+}
+
+.stat:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(16, 24, 40, 0.08);
+}
+
+.stat span {
+  display: flex;
+
+  align-items: center;
+
+  color: #667085;
+
+  font-size: 11px;
+
+  font-weight: 800;
+
+  letter-spacing: 0.9px;
+
+  text-transform: uppercase;
+}
+
+.stat strong {
+  display: flex;
+
+  align-items: center;
+
+  margin-top: 10px;
+
+  color: #344054;
+
+  font-size: 36px;
+
+  font-weight: 800;
+
+  letter-spacing: -0.5px;
+}
+
+/* Specific compact styling for Vendor Intelligence cards to prevent overflow */
+.vendor-card .stats-grid,
+.vendor-directory-card .stats-grid {
   margin: 0 19px;
 
   display: grid;
@@ -671,34 +734,66 @@ select option {
   gap: 10px;
 }
 
-.stat {
-  padding: 16px;
+.vendor-card .stat,
+.vendor-directory-card .stat {
+  padding: 12px 14px;
 
   border: 1px solid #eaecf0;
 
   border-radius: 10px;
 
   background: #fcfcfd;
+
+  box-shadow: none;
 }
 
-.stat span {
+.vendor-card .stat:hover,
+.vendor-directory-card .stat:hover {
+  transform: none;
+  box-shadow: none;
+}
+
+.vendor-card .stat span,
+.vendor-directory-card .stat span {
   display: block;
 
-  color: #98a2b3;
-
   font-size: 9px;
+
+  color: #98a2b3;
 
   font-weight: 700;
 }
 
-.stat strong {
+.vendor-card .stat strong,
+.vendor-directory-card .stat strong {
   display: block;
 
-  margin-top: 7px;
+  margin-top: 5px;
 
-  color: #101828;
+  font-size: 13px;
 
-  font-size: 15px;
+  color: #344054;
+
+  white-space: nowrap;
+
+  overflow: hidden;
+
+  text-overflow: ellipsis;
+}
+
+/* Lighter charcoal black styling for Analyze An Invoice button in Vendors section */
+.vendor-use-btn {
+  background: #344054 !important;
+
+  color: white !important;
+
+  box-shadow: 0 4px 12px rgba(52, 64, 84, 0.15);
+}
+
+.vendor-use-btn:hover {
+  background: #475467 !important;
+
+  transform: translateY(-1px);
 }
 
 .memory-summary {
@@ -2665,3 +2760,28 @@ footer {
   }
 
 }
+
+/* ==========================================
+   SMOOTH SCROLL-REVEAL ENTRANCE ANIMATIONS
+   ========================================== */
+
+.scroll-reveal {
+  opacity: 0;
+  transform: translateY(32px);
+  transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+
+.scroll-reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Stagger delay classes for sequential elements coming up one by one */
+.scroll-reveal-delay-1 { transition-delay: 0.08s; }
+.scroll-reveal-delay-2 { transition-delay: 0.16s; }
+.scroll-reveal-delay-3 { transition-delay: 0.24s; }
+.scroll-reveal-delay-4 { transition-delay: 0.32s; }
+.scroll-reveal-delay-5 { transition-delay: 0.40s; }
+.scroll-reveal-delay-6 { transition-delay: 0.48s; }
